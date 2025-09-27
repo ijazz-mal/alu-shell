@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
-#display 'Best School' ten times with for
-for i in {1..10}
+# display 'Best School' ten times with for statement
+for i in {0..9}
 do
-  echo "Best School"
+echo "Best School"
 done
