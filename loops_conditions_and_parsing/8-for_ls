@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+#loop on files and the use of "#" in shell
+for dash in *; 
+do
+	no_dash=${dash#*-}
+	echo "$no_dash"
+done
