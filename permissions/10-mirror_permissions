@@ -1,2 +1,2 @@
 #!/bin/bash
-chmos --reference=elloh hello
+chmod --reference=elloh hello
