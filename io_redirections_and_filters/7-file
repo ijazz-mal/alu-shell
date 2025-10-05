@@ -1,0 +1,5 @@
+#!/bin/bash
+name=$'\\*\\\\\'"Best School"\\\'\\\\*$\\?\\*\\*\\*\\*\\*:)'
+echo "Best School" >> $name
+
+
