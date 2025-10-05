@@ -1,5 +1,4 @@
 #!/bin/bash
-name=$'\\*\\\\\'"Best School"\\\'\\\\*$\\?\\*\\*\\*\\*\\*:)'
-echo "Best School" >> $name
+echo "Best School" >> "\\*\\\\\'"Best School"\\\'\\\\*$\\?\\*\\*\\*\\*\\*:)"
 
 
