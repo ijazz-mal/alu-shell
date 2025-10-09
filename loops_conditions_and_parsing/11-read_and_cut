@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+# Display usrName, usrID and home directory path of file
+
+file=$(/etc/passwd)
+i=1
+read n <<< "$(echo "$file" | wc -l)"
+
+while [ "$i" -le "$n" ]
+do
+
+	read line <<< "$(head -n $i $file)"
+
+	name=$(echo "$line" | cut -d: -f1)
+	id=$(echo "$line" | cut -d: -f3)
+	home_dir=$(echo "$line" | cut -d: -f6)
+
+	echo "$name:$id:$home_dir"
+
+	i=$((i+1))
+done
