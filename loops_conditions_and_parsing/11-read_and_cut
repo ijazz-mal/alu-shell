@@ -3,12 +3,12 @@
 
 file=$(/etc/passwd)
 i=1
-read n <<< "$(echo "$file" | wc -l)"
+read -r n <<< "$(echo "$file" | wc -l)" #count the lines contained in the file to limit the loop
 
 while [ "$i" -le "$n" ]
 do
 
-	read line <<< "$(head -n $i $file)"
+	read -r line <<< "$(head -n $i "$file" | tail -n 1)" #select a line to work on one line at a time
 
 	name=$(echo "$line" | cut -d: -f1)
 	id=$(echo "$line" | cut -d: -f3)
